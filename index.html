@@ -13,7 +13,34 @@
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/egg.css" />
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/toast.css" />
         
-        <script type="text/javascript" src="/hello-yui/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
+        <script type="text/javascript" src="/breakfast/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
+        <script type="text/javascript">
+            
+            var CONFIG = {
+                base: '/breakfast/resources/javascripts/yui/3.3.0/',
+                filter: 'raw',
+                groups: {
+                    widgets: {
+                        base: '/breakfast/resources/javascripts/widgets/',
+                        modules: {
+                            steak: {
+                                path: 'steak.js',
+                                requires: ['widget', 'node']
+                            },
+                            egg: {
+                                path: 'egg.js',
+                                requires: ['widget', 'node']
+                            },
+                            toast: {
+                                path: 'toast.js',
+                                requires: ['widget', 'node']
+                            }
+                        }
+                    }
+                }
+            };
+            
+        </script>
         
     </head>
     
@@ -24,19 +51,16 @@
             <ul class="__">
                 <li class="_ _6 _first">
                     
-                    <div class="Steak">
+                    <div class="Steak" id="Steak-1">
+                        
+                        <div class="name">Widget: Steak 1</div>
                         
                         <script type="text/javascript">
                             
-                            YUI({
-                                modules: {
-                                    steak: {
-                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/steak.js',
-                                        requires: ['widget']
-                                    }
-                                }
-                            }).use('steak', function(Y){
-                                new Y.Steak();
+                            YUI(CONFIG).use('steak', function(Y){
+                                new Y.BN.Steak({
+                                    boundingBox: Y.one('#Steak-1')
+                                });
                             });
                             
                         </script>
@@ -49,19 +73,16 @@
             <ul class="__">
                 <li class="_ _3 _first">
                     
-                    <div class="Egg">
+                    <div class="Egg" id="Egg-1">
+                        
+                        <div class="name">Widget: Egg 1</div>
                         
                         <script type="text/javascript">
                             
-                            YUI({
-                                modules: {
-                                    steak: {
-                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/egg.js',
-                                        requires: ['widget']
-                                    }
-                                }
-                            }).use('egg', function(Y){
-                                new Y.Egg();
+                            YUI(CONFIG).use('egg', function(Y){
+                                new Y.BN.Egg({
+                                    boundingBox: Y.one('#Egg-1')
+                                });
                             });
                             
                         </script>
@@ -71,19 +92,16 @@
                 </li>
                 <li class="_ _3">
                     
-                    <div class="Egg">
+                    <div class="Egg" id="Egg-2">
+                        
+                        <div class="name">Widget: Egg 2</div>
                         
                         <script type="text/javascript">
                             
-                            YUI({
-                                modules: {
-                                    steak: {
-                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/egg.js',
-                                        requires: ['widget']
-                                    }
-                                }
-                            }).use('egg', function(Y){
-                                new Y.Egg();
+                            YUI(CONFIG).use('egg', function(Y){
+                                new Y.BN.Egg({
+                                    boundingBox: Y.one('#Egg-2')
+                                });
                             });
                             
                         </script>
@@ -96,19 +114,16 @@
             <ul class="__">
                 <li class="_ _6 _first">
                     
-                    <div class="Toast">
+                    <div class="Toast" id="Toast-1">
+                        
+                        <div class="name">Widget: Toast 1</div>
                         
                         <script type="text/javascript">
                             
-                            YUI({
-                                modules: {
-                                    steak: {
-                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/toast.js',
-                                        requires: ['widget']
-                                    }
-                                }
-                            }).use('toast', function(Y){
-                                new Y.Toast();
+                            YUI(CONFIG).use('toast', function(Y){
+                                new Y.BN.Toast({
+                                    boundingBox: Y.one('#Toast-1')
+                                });
                             });
                             
                         </script>
@@ -121,32 +136,11 @@
         </div>
         
         <script type="text/javascript">
-            
-            YUI({
-                base: '/hello-yui/resources/javascripts/yui/3.3.0/',
-                filter: 'raw',
-                groups: {
-                    apps: {
-                        base: '/hello-yui/resources/javascripts/apps/',
-                        modules: {
-                            knife: {
-                                path: 'breakfast/knife.js',
-                                requires: ['widget']
-                            },
-                            fork: {
-                                path: 'breakfast/fork.js',
-                                requires: ['widget']
-                            },
-                            breakfast: {
-                                requires: ['base', 'knife', 'fork']
-                            }
-                        }
-                    }
-                }
-            }).use('breakfast', function(Y){
+            /*
+            YUI(CONFIG).use('breakfast', function(Y){
                 new Y.Breakfast();
             });
-            
+            */
         </script>
         
     </body>
