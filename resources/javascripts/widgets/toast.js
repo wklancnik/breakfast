@@ -37,7 +37,7 @@ YUI.add('toast', function(Y){
         
     });
     
-    Y.namespace('BN');
-    Y.BN.Toast = Toast;
+    Y.namespace('Breakfast');
+    Y.Breakfast.Toast = Toast;
     
 });

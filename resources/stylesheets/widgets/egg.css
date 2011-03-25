@@ -1,0 +1,12 @@
+.Egg {
+    height: 200px;
+    padding: 10px; margin-bottom: 10px;
+    background-color: hsla(59, 50%, 84%, 0.60);
+    cursor: pointer;
+}
+.Egg:hover {
+    background-color: hsla(59, 50%, 84%, 0.80);
+}
+.Egg:active {
+    background-color: hsla(59, 50%, 84%, 1.00);
+}

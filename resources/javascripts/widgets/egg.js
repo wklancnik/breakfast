@@ -33,11 +33,29 @@ YUI.add('egg', function(Y){
             
             
             
+        },
+        
+        bindUI: function () {
+            
+            this.on('click', Y.bind(this._publish))
+            
+        },
+        
+        _publish: function () {
+            
+            var publisher = new Y.EventTarget();
+            
+            publisher.name = 'egg';
+            publisher.publish('egg:click', {
+                broadcast: 2,
+                emitFacade: true
+            });
+            
         }
         
     });
     
-    Y.namespace('BN');
-    Y.BN.Egg = Egg;
+    Y.namespace('Breakfast');
+    Y.Breakfast.Egg = Egg;
     
 });

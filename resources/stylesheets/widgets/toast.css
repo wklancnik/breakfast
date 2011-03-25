@@ -1,0 +1,12 @@
+.Toast {
+    height: 100px;
+    padding: 10px; margin-bottom: 10px;
+    background-color: hsla(18, 69%, 82%, 0.60);
+    cursor: pointer;
+}
+.Toast:hover {
+    background-color: hsla(18, 69%, 82%, 0.80);
+}
+.Toast:active {
+    background-color: hsla(18, 69%, 82%, 1.00);
+}

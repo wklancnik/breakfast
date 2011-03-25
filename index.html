@@ -9,14 +9,14 @@
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/reset.css" />
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/grid.css" />
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/global.css" />
-        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/steak.css" />
-        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/egg.css" />
-        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/toast.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/widgets/steak.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/widgets/egg.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/widgets/toast.css" />
         
         <script type="text/javascript" src="/breakfast/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
         <script type="text/javascript">
             
-            var CONFIG = {
+            var BREAKFAST_CONFIG = {
                 base: '/breakfast/resources/javascripts/yui/3.3.0/',
                 filter: 'raw',
                 groups: {
@@ -34,6 +34,27 @@
                             toast: {
                                 path: 'toast.js',
                                 requires: ['widget', 'node']
+                            }
+                        }
+                    },
+                    bases: {
+                        base: '/breakfast/resources/javascripts/bases/',
+                        modules: {
+                            knife: {
+                                path: 'knife.js',
+                                requires: ['base']
+                            },
+                            fork: {
+                                path: 'fork.js',
+                                requires: ['base']
+                            }
+                        }
+                    },
+                    apps: {
+                        base: '/breakfast/resources/javascripts/apps/',
+                        modules: {
+                            breakfast: {
+                                requires: ['base', 'knife', 'fork']
                             }
                         }
                     }
@@ -57,8 +78,8 @@
                         
                         <script type="text/javascript">
                             
-                            YUI(CONFIG).use('steak', function(Y){
-                                new Y.BN.Steak({
+                            YUI(BREAKFAST_CONFIG).use('steak', function(Y){
+                                new Y.Breakfast.Steak({
                                     boundingBox: Y.one('#Steak-1')
                                 });
                             });
@@ -79,8 +100,8 @@
                         
                         <script type="text/javascript">
                             
-                            YUI(CONFIG).use('egg', function(Y){
-                                new Y.BN.Egg({
+                            YUI(BREAKFAST_CONFIG).use('egg', function(Y){
+                                new Y.Breakfast.Egg({
                                     boundingBox: Y.one('#Egg-1')
                                 });
                             });
@@ -98,8 +119,8 @@
                         
                         <script type="text/javascript">
                             
-                            YUI(CONFIG).use('egg', function(Y){
-                                new Y.BN.Egg({
+                            YUI(BREAKFAST_CONFIG).use('egg', function(Y){
+                                new Y.Breakfast.Egg({
                                     boundingBox: Y.one('#Egg-2')
                                 });
                             });
@@ -120,8 +141,8 @@
                         
                         <script type="text/javascript">
                             
-                            YUI(CONFIG).use('toast', function(Y){
-                                new Y.BN.Toast({
+                            YUI(BREAKFAST_CONFIG).use('toast', function(Y){
+                                new Y.Breakfast.Toast({
                                     boundingBox: Y.one('#Toast-1')
                                 });
                             });
@@ -136,11 +157,11 @@
         </div>
         
         <script type="text/javascript">
-            /*
-            YUI(CONFIG).use('breakfast', function(Y){
-                new Y.Breakfast();
+            
+            YUI(BREAKFAST_CONFIG).use('breakfast', function(Y){
+                new Y.Breakfast.App();
             });
-            */
+            
         </script>
         
     </body>

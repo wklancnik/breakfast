@@ -1,0 +1,12 @@
+.Steak {
+    height: 100px;
+    padding: 10px; margin-bottom: 10px;
+    background-color: hsla(7, 18%, 52%, 0.60);
+    cursor: pointer;
+}
+.Steak:hover {
+    background-color: hsla(7, 18%, 52%, 0.80);
+}
+.Steak:active {
+    background-color: hsla(7, 18%, 52%, 1.00);
+}

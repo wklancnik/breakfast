@@ -37,7 +37,7 @@ YUI.add('steak', function(Y){
         
     });
     
-    Y.namespace('BN');
-    Y.BN.Steak = Steak;
+    Y.namespace('Breakfast');
+    Y.Breakfast.Steak = Steak;
     
 });
