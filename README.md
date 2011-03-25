@@ -1,0 +1,1 @@
+An example YUI application.

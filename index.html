@@ -1,0 +1,154 @@
+<!doctype html>
+
+<html>
+    
+    <head>
+        
+        <title>breakfast</title>
+        
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/reset.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/grid.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/lib/global.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/steak.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/egg.css" />
+        <link rel="stylesheet" type="text/css" href="resources/stylesheets/modules/toast.css" />
+        
+        <script type="text/javascript" src="/hello-yui/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
+        
+    </head>
+    
+    <body>
+        
+        <div class="-layout">
+            
+            <ul class="__">
+                <li class="_ _6 _first">
+                    
+                    <div class="Steak">
+                        
+                        <script type="text/javascript">
+                            
+                            YUI({
+                                modules: {
+                                    steak: {
+                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/steak.js',
+                                        requires: ['widget']
+                                    }
+                                }
+                            }).use('steak', function(Y){
+                                new Y.Steak();
+                            });
+                            
+                        </script>
+                        
+                    </div><!-- /Steak -->
+                    
+                </li>
+            </ul>
+            
+            <ul class="__">
+                <li class="_ _3 _first">
+                    
+                    <div class="Egg">
+                        
+                        <script type="text/javascript">
+                            
+                            YUI({
+                                modules: {
+                                    steak: {
+                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/egg.js',
+                                        requires: ['widget']
+                                    }
+                                }
+                            }).use('egg', function(Y){
+                                new Y.Egg();
+                            });
+                            
+                        </script>
+                        
+                    </div><!-- /Egg -->
+                    
+                </li>
+                <li class="_ _3">
+                    
+                    <div class="Egg">
+                        
+                        <script type="text/javascript">
+                            
+                            YUI({
+                                modules: {
+                                    steak: {
+                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/egg.js',
+                                        requires: ['widget']
+                                    }
+                                }
+                            }).use('egg', function(Y){
+                                new Y.Egg();
+                            });
+                            
+                        </script>
+                        
+                    </div><!-- /Egg -->
+                    
+                </li>
+            </ul>
+            
+            <ul class="__">
+                <li class="_ _6 _first">
+                    
+                    <div class="Toast">
+                        
+                        <script type="text/javascript">
+                            
+                            YUI({
+                                modules: {
+                                    steak: {
+                                        fullpath: '/hello-yui/resources/javascripts/apps/breakfast/toast.js',
+                                        requires: ['widget']
+                                    }
+                                }
+                            }).use('toast', function(Y){
+                                new Y.Toast();
+                            });
+                            
+                        </script>
+                        
+                    </div><!-- /Toast -->
+                    
+                </li>
+            </ul>
+            
+        </div>
+        
+        <script type="text/javascript">
+            
+            YUI({
+                base: '/hello-yui/resources/javascripts/yui/3.3.0/',
+                filter: 'raw',
+                groups: {
+                    apps: {
+                        base: '/hello-yui/resources/javascripts/apps/',
+                        modules: {
+                            knife: {
+                                path: 'breakfast/knife.js',
+                                requires: ['widget']
+                            },
+                            fork: {
+                                path: 'breakfast/fork.js',
+                                requires: ['widget']
+                            },
+                            breakfast: {
+                                requires: ['base', 'knife', 'fork']
+                            }
+                        }
+                    }
+                }
+            }).use('breakfast', function(Y){
+                new Y.Breakfast();
+            });
+            
+        </script>
+        
+    </body>
+    
+</html>

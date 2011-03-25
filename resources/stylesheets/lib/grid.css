@@ -1,0 +1,55 @@
+.__ {
+    
+}
+/* apply the clearfix */
+.__:before,
+.__:after {
+    content: "\0020"; display: block; height: 0; visibility: hidden;
+}
+.__:after {
+    clear: both;
+}
+    ._ {
+        float: left;
+        min-height: 1px;
+        margin-left: 10px;
+    }
+    ._first {
+        margin-left: 0;
+    }
+    ._1 {
+        width: 100px;
+    }
+    ._2 {
+        width: 210px;
+    }
+    ._3 {
+        width: 320px;
+    }
+    ._4 {
+        width: 430px;
+    }
+    ._5 {
+        width: 540px;
+    }
+    ._6 {
+        width: 650px;
+    }
+    ._7 {
+        width: 760px;
+    }
+    ._8 {
+        width: 870px;
+    }
+    ._9 {
+        width: 980px;
+    }
+    ._10 {
+        width: 1090px;
+    }
+    ._11 {
+        width: 1200px;
+    }
+    ._12 {
+        width: 1310px;
+    }
