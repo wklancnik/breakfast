@@ -21,3 +21,7 @@ It is highly recommended that you familiarize yourself with the following YUI co
 - Building YUI 3 Custom Modules - [Slides](http://www.slideshare.net/caridy/building-yui-3-custom-modules)
 - Web App Development with YUI 3 - [Video](http://developer.yahoo.com/yui/theater/video.php?v=ericf-yuiconf2009-webapps), [Slides](http://www.slideshare.net/eferraiuolo/web-app-development-with-yui-3-2379064), [Example](https://gist.github.com/228240), [Discussion](http://yuilibrary.com/forum/viewtopic.php?p=10764)
 - Heavy Duty YUI 3 & YQL - [Video](http://developer.yahoo.com/yui/theater/video.php?v=yuiconf2010-ferraiuolo)
+
+## References
+
+- [jQuery - YUI3 Rosetta Stone](http://www.jsrosettastone.com/)
