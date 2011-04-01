@@ -25,3 +25,4 @@ It is highly recommended that you familiarize yourself with the following YUI co
 ## Additional Resources
 
 - [jQuery - YUI3 Rosetta Stone](http://www.jsrosettastone.com/)
+- [A Recipe for a YUI 3 Application](http://www.yuiblog.com/blog/2011/04/01/a-recipe-for-a-yui-3-application/)
