@@ -13,15 +13,15 @@
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/widgets/egg.css" />
         <link rel="stylesheet" type="text/css" href="resources/stylesheets/widgets/toast.css" />
         
-        <script type="text/javascript" src="/breakfast/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
+        <script type="text/javascript" src="/resources/javascripts/yui/3.3.0/yui/yui.js"></script>
         <script type="text/javascript">
             
             var BREAKFAST_CONFIG = {
-                base: '/breakfast/resources/javascripts/yui/3.3.0/',
+                base: '/resources/javascripts/yui/3.3.0/',
                 filter: 'raw',
                 groups: {
                     widgets: {
-                        base: '/breakfast/resources/javascripts/widgets/',
+                        base: '/resources/javascripts/widgets/',
                         modules: {
                             steak: {
                                 path: 'steak.js',
@@ -38,7 +38,7 @@
                         }
                     },
                     bases: {
-                        base: '/breakfast/resources/javascripts/bases/',
+                        base: '/resources/javascripts/bases/',
                         modules: {
                             knife: {
                                 path: 'knife.js',
@@ -47,11 +47,15 @@
                             fork: {
                                 path: 'fork.js',
                                 requires: ['base']
+                            },
+                            'tracker': {
+                                path: 'tracker.js',
+                                requires: ['base']
                             }
                         }
                     },
                     apps: {
-                        base: '/breakfast/resources/javascripts/apps/',
+                        base: '/resources/javascripts/apps/',
                         modules: {
                             breakfast: {
                                 requires: ['base', 'knife', 'fork']
@@ -160,6 +164,20 @@
             
             YUI(BREAKFAST_CONFIG).use('breakfast', function(Y){
                 new Y.Breakfast.App();
+            });
+            
+        </script>
+        <script type="text/javascript">
+            
+            YUI(BREAKFAST_CONFIG).use('tracker', function(Y){
+				new Y.Tracker({
+                    fn: function(){console.log('callback!');}
+                });
+            });
+            YUI(BREAKFAST_CONFIG).use('tracker', function(Y){
+				new Y.Tracker({
+                    fn: function(){console.log('callback2!');}
+                });
             });
             
         </script>
